@@ -63,7 +63,8 @@ url:
 特定类型实体的深度语义表达
 对于时间和数量两种实体，TexSmart可以推导出它们具体的语义表达。一些NLP工具利用正则表达式或者有监督的序列标注方法来识别时间和数量实体。但是，这些方法很难推导出实体的结构化语义信息。为了克服这个问题，该模块的实现采用了比正则表达式表达能力更强的上下文无关文法（CFG）。基本流程是：先根据特定类型实体的自然语言表达格式来编写CFG的产生式，然后利用Earley算法[13]来把表示这种实体的自然语言文本解析为一棵语法树，最后通过遍历语法树来生成实体的深度语义表达。
 
-# 3.参考资料 
+# 3.Reference 参考资料
+
     •	[1]. John Lafferty, Andrew McCallum, and Fernando Pereira. Conditional random fields: Probabilistic models for segmenting and labeling sequence data, ICML 2001.
     •	[2]. Alan Akbik, Duncan Blythe, and Roland Vollgraf . Contextual String Embeddings for Sequence Labeling. COLING 2018.
     •	[3]. Nikita Kitaev and Dan Klein. Constituency Parsing with a Self-Attentive Encoder. ACL 2018.
